@@ -26,10 +26,11 @@ def facts():
     return jsonify(facts)
 
 
-@app.route('/test', methods=['GET'])
+@app.route('/test', methods=['POST'])
 def test():
-    age = 30
-    job = 'unemployed'
+    json_data = request.json
+    age = int(json_data["age"])
+    job = json_data["job"]
     marital = 'married'
     education = 'primary'
     default = 'no'

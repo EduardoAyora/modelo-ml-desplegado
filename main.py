@@ -31,20 +31,20 @@ def test():
     json_data = request.json
     age = int(json_data["age"])
     job = json_data["job"]
-    marital = 'married'
-    education = 'primary'
-    default = 'no'
-    balance = 1787
-    housing = 'no'
-    loan = 'no'
-    contact = 'cellular'
-    day = 19
-    month = 'oct'
-    duration = 79
-    campaign = 1
-    pdays = -1
-    previous = 0
-    poutcome = 'unknown'
+    marital = json_data["marital"]
+    education = json_data["education"]
+    default = json_data["default"]
+    balance = int(json_data["balance"])
+    housing = json_data["housing"]
+    loan = json_data["loan"]
+    contact = json_data["contact"]
+    day = int(json_data["day"])
+    month = json_data["month"]
+    duration = int(json_data["duration"])
+    campaign = int(json_data["campaign"])
+    pdays = int(json_data["pdays"])
+    previous = int(json_data["previous"])
+    poutcome = json_data["poutcome"]
 
     prediccion = prediction.predecirNuevoCliente(age, job, marital, education, default,
                                                  balance, housing, loan, contact, day,
